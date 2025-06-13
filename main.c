@@ -16,7 +16,7 @@ int esta_vazia(No *topo)
 void push(No **topo, char *valor)
 {
   No *novo_no = (No *)malloc(sizeof(No));
-  novo_no->dado = malloc(20); //Quantidade de caracteres máxima
+  novo_no->dado = malloc(20); //Quantidade de caracteres máxima.
   strcpy(novo_no->dado, valor);
   novo_no->proximo = *topo;
   *topo = novo_no;
@@ -27,7 +27,7 @@ char *pop(No **topo)
   if (!esta_vazia(*topo))
   {
     No *temp = *topo;
-    char* valor = malloc(strlen(temp->dado) + 1); //Pegando o tamanho do dado + 1 para caber os caracteres;
+    char* valor = malloc(strlen(temp->dado) + 1); //Pegando o tamanho do dado + 1, para caber os caracteres.
     strcpy(valor,temp->dado);
     *topo = (*topo)->proximo;
 
